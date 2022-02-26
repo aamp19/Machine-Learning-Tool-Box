@@ -1,0 +1,36 @@
+https://dev.to/mungaigikure/how-to-set-up-postgres-in-your-django-project-575i
+
+1.)Install and configure postgres on your machine
+
+2.) pip install psycopg2
+
+pip install psycopg2-binary
+
+3.)Add following to settings.py DATABASES list in django backend:
+
+DATABASES = {
+
+    'default': {
+
+        'ENGINE': 'django.db.backends.postgresql',
+
+        'NAME': ‘<db_name>’,
+
+        'USER': '<db_username>',
+
+        'PASSWORD': '<password>',
+
+        'HOST': '<db_host>',
+
+        'PORT': '<db_port>',
+
+    }
+
+}
+
+To check that it's working, make sure server is running from postgres app, and run following commands: 
+
+
+python3 manage.py makemigrations
+
+python3 manage.py migrate
